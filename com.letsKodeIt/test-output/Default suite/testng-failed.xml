@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGTest.VerifyRadioButton">
+      <class name="goibiboPackage.GoibiboTest">
         <methods>
-          <include name="verifyAllRadioButtons"/>
+          <include name="partialTextSelect"/>
         </methods>
-      </class> <!-- testNGTest.VerifyRadioButton -->
+      </class> <!-- goibiboPackage.GoibiboTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

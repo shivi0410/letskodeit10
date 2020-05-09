@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-
-
+import org.testng.annotations.Test;
 
 public class MainDriver {
 
@@ -20,8 +18,7 @@ public class MainDriver {
 	
 	}
 */
-
-	public void openBrowser(String browser) {
+		public void openBrowser(String browser) {
 
 		if(browser.equalsIgnoreCase("chrome")) {
 
@@ -53,5 +50,41 @@ public class MainDriver {
 		}
 
 	}
+		
+		public void openBrowser2(String browser) {
+			
+			
+			if(browser.equalsIgnoreCase("chrome")) {
+
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\SHIVI\\Downloads\\NEW Files\\Drivers\\chromedriver.exe");
+				driver = new ChromeDriver();
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.get("https://www.google.com/");
+				driver.get("https://www.goibibo.com/");
+				driver.manage().window().maximize();
+			}
+			else if(browser.equalsIgnoreCase("edge")) {
+
+				System.setProperty("webdriver.edge.driver", "C:\\Users\\SHIVI\\Downloads\\NEW Files\\Drivers\\msedgedriver.exe");
+				driver = new EdgeDriver();
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.get("https://www.google.com/");
+				driver.get("https://www.goibibo.com/");
+				driver.manage().window().maximize();
+			}
+			else if(browser.equalsIgnoreCase("firefox")) {
+
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\SHIVI\\Downloads\\NEW Files\\Drivers\\geckodriver.exe");
+				driver = new FirefoxDriver();
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.get("https://www.google.com/");
+				driver.get("https://www.goibibo.com/");
+				driver.manage().window().maximize();
+			}
+			else {
+				System.out.println("Invalid Selection");
+			}
+
+		}
 
 }

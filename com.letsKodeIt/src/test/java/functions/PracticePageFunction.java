@@ -3,11 +3,11 @@ package functions;
 import org.openqa.selenium.By;
 
 import mainFunction.UtilClass;
-import xpath.PracticePage;
+import xpath.PracticePageXpath;
 
 public class PracticePageFunction extends UtilClass {
 
-	PracticePage pp = new PracticePage();
+	PracticePageXpath pp = new PracticePageXpath();
 
 	public void clickBmwRadioButton() {
 
@@ -42,16 +42,17 @@ public class PracticePageFunction extends UtilClass {
 
 		clickElement(pp.benzDropDownXpath);
 	}
-	public void getBenzDropDownText() {
 
-
-	}
-	public void clickFruits() {
+	public void clickColor() {
 
 		clickElement(pp.appleXpath);
 	}
 	public void clickHondaCheckBox() {
 
 		clickElement(pp.hondaCheckBoxXpath);
+	}
+
+	public void clickNewWindowButton() {
+		clickElement(pp.openWindow);
 	}
 }
